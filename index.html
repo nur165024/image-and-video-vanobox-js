@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<title>Image and video vanobox</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- fontawesome link  -->
+    <script src="https://kit.fontawesome.com/ec5a73e974.js"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/venobox.css">
+  </head>
+  <body>
+
+	<style>
+		.banner_video{
+			position: relative;
+			top: 60px;
+			left: 0;
+		}
+
+		.banner_video::after{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, .4);
+			z-index: 1;
+		}
+
+		.banner_video .view_icon i{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #ffffff;	
+			font-size: 50px;	
+			z-index: 2;	
+		}
+
+		.banner_video img{
+			width: 100%;
+			height: 400px;
+		}
+	</style>
+	  
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="banner_video">
+						<div class="view_icon">
+							<a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=K7U8qZHGdxI"><i class="fas fa-video"></i></a>
+						</div>
+						<img class="img-fluid" src="image/banner_video.png" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="banner_video">
+						<div class="view_icon">
+							<a class="venobox" href="image/banner_video.png"><i class="fas fa-camera"></i></a>
+						</div>
+						<img class="img-fluid" src="image/banner_video_1.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="js/venobox.min.js"></script>
+	<script>
+		$(function(){
+			$('.venobox').venobox();
+		});
+	</script>
+  </body>
+</html>
